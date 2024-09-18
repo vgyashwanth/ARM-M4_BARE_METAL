@@ -14,7 +14,7 @@ extern uint32_t _ebss;
 /*__attribute__ ((section(".isr_vec"))) will create a section .isr_vec(user dependent) stores their instead of storing in .data*/
 uint32_t InterruptVectorTable[101] __attribute__ ((section(".isr_vec"))) = {
 
-        SRAM_START,
+        SRAM_END,
         (uint32_t)&Reset_Handler,
         (uint32_t)&NMI_Handler,
       /* rest need to add refering to microcontroller Interrupt vector table */
