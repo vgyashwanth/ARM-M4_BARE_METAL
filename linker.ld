@@ -19,6 +19,9 @@ SECTIONS{
             _etext = .; /* linker counter stores the address  of this section */
         }>FLASH AT> FLASH
 
+        /*>FLASH CPU execution address*/
+        /*AT> FLASH program store address*/
+
         .data :
         { 
             _sdata = .; /* start address of the .data section */
@@ -27,6 +30,8 @@ SECTIONS{
           . = ALIGN(4); /*used to allign the memory address*/
         }> SRAM AT> FLASH
 
+        /*> SRAM CPU execution address*/
+        /*AT> FLASH actual store address*/
         .bss :
         { 
             _sbss = .;
